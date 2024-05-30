@@ -1,0 +1,32 @@
+html {
+  @apply text-base;
+}
+
+body {
+  @apply text-[16px] bg-body font-primary font-normal leading-relaxed text-text overflow-x-hidden;
+}
+
+h1 {
+  @apply font-primary text-primary leading-[48px] text-[48px] md:leading-[90px] md:text-[90px];
+}
+
+h2 {
+  @apply text-primary text-[18px];
+}
+
+h3 {
+  @apply font-primary text-primary text-[16.67px] md:text-[24px];
+}
+
+h4 {
+  @apply font-medium text-body text-[12px] md:text-[14px];
+}
+
+h5 {
+  @apply text-primary text-[14px] md:text-[16px];
+}
+
+h6 {
+  @apply text-primary text-[12px] md:text-[14px];
+}
+
