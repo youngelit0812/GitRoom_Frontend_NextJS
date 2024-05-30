@@ -34,12 +34,15 @@ const Page = () => {
       className={`${primaryFont.variable} ${secondaryFont.variable} flex min-h-screen flex-col items-center justify-center`}
     >
       <div
-        className="flex h-[630px] w-[375px] flex-col items-center justify-center md:h-[800px] md:w-[1440px] relative"
+        className="flex h-[630px] w-[375px] flex-col items-center justify-center md:h-[800px] md:w-[1440px] overflow-x-hidden relative"
         id="top-banner"
       >
+        <div className="header-top-light" />
+        <div className="header-top-light-md" />
+        <div className="header-top-light-sm" />
         <Player
           autoplay
-          className="w-[600px] md:w-[2400px]"
+          className="header-player"
           loop
           src={headerAnimation}
         />
@@ -78,8 +81,8 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center">
-        <div className="w-[375px] mt-[108px] md:mt-[20px] md:w-[1440px]">
+      <div className="flex w-full flex-col items-center justify-center overflow-x-hidden">
+        <div className="w-[375px] mt-[108px] md:mt-[20px] md:w-[1440px] overflow-x-hidden">
           <img className="slide-image" src="/Logos.png" alt="" />
         </div>
       </div>
