@@ -7,16 +7,16 @@ import {
 } from '@/app/ui/components/blockTitle/styles';
 
 interface BlockTitleProps {
-  desktopHeight: number;
-  desktopWidth: number;
-  mobileHeight: number;
-  mobileWidth: number;
+  desktopHeight?: number;
+  desktopWidth?: number;
+  mobileHeight?: number;
+  mobileWidth?: number;
   titleCaption: string;
   titleDesktopHeight: number;
   titleDesktopWidth: number;
   titleMobileHeight: number;
   titleMobileWidth: number;
-  titleImagePath: string;  
+  titleImagePath?: string;
 }
 
 const BlockTitle: React.FC<BlockTitleProps> = ({
@@ -29,7 +29,7 @@ const BlockTitle: React.FC<BlockTitleProps> = ({
   titleDesktopWidth,
   titleMobileHeight,
   titleMobileWidth,
-  titleImagePath,  
+  titleImagePath,
 }) => {
   return (
     <TitleContainer
@@ -38,28 +38,32 @@ const BlockTitle: React.FC<BlockTitleProps> = ({
       $mobileHeight={titleMobileHeight}
       $mobileWidth={titleMobileWidth}
     >
-      <TitleImageContainer
-        $desktopHeight={desktopHeight}
-        $desktopWidth={desktopWidth}
-        $mobileHeight={mobileHeight}
-        $mobileWidth={mobileWidth}
-      >
-        <Image
-          src={titleImagePath}
-          width={desktopWidth}
-          height={desktopHeight}
-          alt=""
-          className="hidden md:flex"
-        />
-        <Image
-          src={titleImagePath}
-          width={mobileWidth}
-          height={mobileHeight}
-          alt=""
-          className="flex md:hidden"
-        />
-      </TitleImageContainer>
-      <div className="block-title-caption leading-[30.8px] md:leading-[48.4px] mt-[20px] md:mt-[24px]">{titleCaption}</div>
+      {titleImagePath && desktopHeight && desktopWidth && mobileHeight && mobileWidth && (
+        <TitleImageContainer
+          $desktopHeight={desktopHeight}
+          $desktopWidth={desktopWidth}
+          $mobileHeight={mobileHeight}
+          $mobileWidth={mobileWidth}
+        >
+          <Image
+            src={titleImagePath}
+            width={desktopWidth}
+            height={desktopHeight}
+            alt=""
+            className="hidden md:flex"
+          />
+          <Image
+            src={titleImagePath}
+            width={mobileWidth}
+            height={mobileHeight}
+            alt=""
+            className="flex md:hidden"
+          />
+        </TitleImageContainer>
+      )}
+      <div className="block-title-caption mt-[20px] leading-[30.8px] md:mt-[24px] md:leading-[48.4px]">
+        {titleCaption}
+      </div>
     </TitleContainer>
   );
 };

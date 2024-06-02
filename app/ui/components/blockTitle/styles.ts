@@ -7,6 +7,7 @@ export const TitleContainer = styled.div<{
   $mobileHeight: number;
 }>`
   align-items: center;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;

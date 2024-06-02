@@ -25,7 +25,7 @@ const SayCard: React.FC<SayCardProps> = ({
         <Image src={sayerImageURL} width={40} height={40} alt="" />
         <div className="flex flex-col ml-[12px] flex-grow h-full">
             <span className="font-primary font-semibold text-primary text-[16px] leading-[20.8px]">{sayerName}</span>
-            <span className="font-secondary text-primary text-[13px] leading-[15.6px]">{contact}</span>
+            <span className="text-primary text-[13px] leading-[15.6px]">{contact}</span>
         </div>
       </div>
     </div>

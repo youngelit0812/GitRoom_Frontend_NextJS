@@ -31,19 +31,19 @@ $mobile-slide-image-width: 846.06px;
 }
 
 .block-sub-title-caption {
-  @apply mt-[20px] font-secondary text-[14px] text-primary md:mt-[16px] md:text-[16px];
+  @apply mt-[20px] text-[14px] text-primary md:mt-[16px] md:text-[16px];
 }
 
 .git-community-card-caption {
-  @apply font-secondary text-[22px] font-semibold leading-[26.4px] text-primary md:text-[32px] md:leading-[38.4px];
+  @apply text-[22px] font-semibold leading-[26.4px] text-primary md:text-[32px] md:leading-[38.4px];
 }
 
 .git-community-card-content {
-  @apply font-secondary text-[14px] leading-[16.8px] text-primary md:text-[16px] md:leading-[19.2px];
+  @apply text-[14px] leading-[16.8px] text-primary md:text-[16px] md:leading-[19.2px];
 }
 
 .git-community-card-button-caption {
-  @apply font-secondary text-[16px] font-medium leading-[19.2px] text-third md:text-[18px] md:leading-[21.6px];
+  @apply text-[16px] font-medium leading-[19.2px] text-third md:text-[18px] md:leading-[21.6px];
 }
 
 .git-community-card-animation {
@@ -78,12 +78,12 @@ $mobile-slide-image-width: 846.06px;
 
 .home-footer-player {
   @media screen and (max-width: 1920px) {
-    @apply absolute h-[800px] left-0 w-[1440px] top-0;
+    @apply absolute left-0 w-[1440px] top-[-212px];
   }
 
   /* Desktop styles - screens larger than or equal to 768px */
   @media screen and (max-width: 375px) {
-    @apply h-[468.41px] w-[936.86px];
+    @apply absolute left-[-96px] top-[-87px] w-[566px];
   }
 }
 
@@ -100,9 +100,12 @@ $mobile-slide-image-width: 846.06px;
 
 .header-player {
   @media screen and (max-width: 1920px) {
-    @apply w-[2400px];
+    @apply absolute left-[-260px] top-0 w-[2440px];
   }
 
+  @media screen and (max-width: 1440px) {
+    @apply absolute left-[-500px] top-0 w-[2440px];
+  }
   /* Desktop styles - screens larger than or equal to 768px */
   @media screen and (max-width: 375px) {
     @apply absolute left-[-700px] top-0 w-[1420px];
@@ -313,7 +316,7 @@ $mobile-slide-image-width: 846.06px;
 }
 
 .resource-article-title-LG-caption {
-  @apply font-secondary font-bold leading-[37.32px] text-[41.68x] md:text-[52.23px] md:leading-[52.77px];
+  @apply font-bold leading-[37.32px] text-[41.68x] md:text-[52.23px] md:leading-[52.77px];
 
   background:
     linear-gradient(90deg, #62d9ff 0%, #4081ff 100%),
@@ -347,11 +350,11 @@ $mobile-slide-image-width: 846.06px;
 }
 
 .resource-article-title-SM-caption {
-  @apply font-secondary text-[20.84px] font-medium leading-[37.32px] text-primary md:text-[26.11px] md:leading-[46.82px];
+  @apply text-[20.84px] font-medium leading-[37.32px] text-primary md:text-[26.11px] md:leading-[46.82px];
 }
 
 .resource-article-content-title-caption {
-  @apply font-secondary text-[20.84px] font-medium leading-[37.32px] text-primary md:text-[18px] md:leading-[18px];
+  @apply text-[20.84px] font-medium leading-[37.32px] text-primary md:text-[18px] md:leading-[18px];
 }
 
 .say-card-wrapper-border {
@@ -449,13 +452,17 @@ $mobile-slide-image-width: 846.06px;
 }
 
 .text-1 {
-  @apply font-secondary text-[18px] leading-[19.8px] text-primary md:text-[22px] md:leading-[24.2px];
+  @apply text-[18px] leading-[19.8px] text-primary md:text-[22px] md:leading-[24.2px];
 }
 
 .text-2 {
-  @apply font-secondary text-[13px] leading-[19.5px] text-primary text-opacity-90 md:text-[15px] md:leading-[22.5px];
+  @apply text-[13px] leading-[19.5px] text-primary text-opacity-90 md:text-[15px] md:leading-[22.5px];
 }
 
 .text-3 {
   @apply items-center justify-center font-primary text-[12.16px] font-bold leading-[15.8px] text-primary md:text-[15.25px] md:leading-[19.83px];
+}
+
+.text-4 {
+  @apply items-center justify-center font-primary text-[24px] font-semibold leading-[26.4px] text-center text-primary md:text-[40px] md:leading-[44px];
 }

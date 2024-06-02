@@ -26,6 +26,8 @@ const config: Config = {
         primary: "#ffffff",
         secondary: "#1E1D2D",
         third: "#8AABFF",
+        fourth: "#B385FF",
+        fifth: "#BAB9FF",
         placeholder: "#DEDCF9",
         text: "#747272",
         dark: "#747272",
