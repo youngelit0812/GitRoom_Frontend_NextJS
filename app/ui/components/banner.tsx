@@ -14,7 +14,16 @@ const Banner: React.FC = () => {
   }
   return (
     <div className="banner-wrapper row bg-opacity-35 flex h-[60px] w-[335px] justify-between rounded-[12px] bg-banner p-[16px] md:min-h-[80px] md:w-[1280px] md:rounded-[20px]">
-      <BannerMark />
+      <div className="h-full w-[97.33px] md:w-[145px]">
+        <BannerMark
+          imageURL="/banner_mark.png"
+          desktopHeight={62.03}
+          desktopWidth={68}
+          mobileHeight={43.07}
+          mobileWidth={47.22}
+          text_type={1}
+        />
+      </div>
       <div className="row flex">
         <div className="block md:hidden">
           <Bars3Icon className="h-[24px] w-[24px]" onClick={openMenuModal} />

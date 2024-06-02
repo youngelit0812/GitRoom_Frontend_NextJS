@@ -22,13 +22,15 @@ const config: Config = {
       },
       colors: {        
         banner: "#262534",
+        borderColor: "#CDCCFF",
         primary: "#ffffff",
         secondary: "#1E1D2D",
+        third: "#8AABFF",
         placeholder: "#DEDCF9",
         text: "#747272",
         dark: "#747272",
         cred: "#FD2C2F",
-        body: "#000000"
+        body: "#000000"        
       },      
       fontFamily: {
         primary: ['var(--font-chakrapetch)'],
@@ -36,6 +38,8 @@ const config: Config = {
       },
       opacity: {
         '35': '0.35',
+        '80': '0.8',
+        '90': '0.9',
       }
     },
     keyframes: {
