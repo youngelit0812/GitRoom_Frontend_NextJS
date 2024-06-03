@@ -17,7 +17,12 @@ const SayCard: React.FC<SayCardProps> = ({
 }) => {
   return (
     <div className="say-card-wrapper-border">
-      <Image src={titleImageURL} width={60} height={80} alt="" />
+      {titleImageURL === '/say_card/mark_3.png' ? (
+        <Image src={titleImageURL} width={88} height={80} alt="" />
+      ):(
+        <Image src={titleImageURL} width={60} height={80} alt="" />
+      )}
+      
       <div className="mt-[30px] w-full text-[14px] leading-[16.8px]">
         {contents}
       </div>
@@ -25,7 +30,7 @@ const SayCard: React.FC<SayCardProps> = ({
         <Image src={sayerImageURL} width={40} height={40} alt="" />
         <div className="flex flex-col ml-[12px] flex-grow h-full">
             <span className="font-primary font-semibold text-primary text-[16px] leading-[20.8px]">{sayerName}</span>
-            <span className="text-primary text-[13px] leading-[15.6px]">{contact}</span>
+            <span className="text-primary text-[13px] leading-[15.6px] whitespace-nowrap">{contact}</span>
         </div>
       </div>
     </div>

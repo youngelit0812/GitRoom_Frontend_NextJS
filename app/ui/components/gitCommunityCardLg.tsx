@@ -5,16 +5,18 @@ type GitCommunityCardLgProps = {
   buttonCaption: string;
   caption: string;
   content: string;
+  marginLeftFlag?: boolean;
 };
 
 const GitCommunityCardLg: React.FC<GitCommunityCardLgProps> = ({
   backAnimation,
   buttonCaption,
   caption,
-  content,  
+  content,
+  marginLeftFlag,
 }) => {
   return (
-    <div className="relative border border-borderColor h-[415px] w-[335px] overflow-x-hidden md:h-[520px] md:w-[635px]">
+    <div className={`relative bg-community-mbLgBg md:bg-community-dtLgBg h-[415px] w-[335px] overflow-x-hidden md:h-[520px] md:w-[635px] ${marginLeftFlag ? "md:ml-[10px]" : ""}`}>
       <Player
         autoplay
         className="git-community-card-animation"

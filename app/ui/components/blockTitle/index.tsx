@@ -38,29 +38,26 @@ const BlockTitle: React.FC<BlockTitleProps> = ({
       $mobileHeight={titleMobileHeight}
       $mobileWidth={titleMobileWidth}
     >
-      {titleImagePath && desktopHeight && desktopWidth && mobileHeight && mobileWidth && (
-        <TitleImageContainer
-          $desktopHeight={desktopHeight}
-          $desktopWidth={desktopWidth}
-          $mobileHeight={mobileHeight}
-          $mobileWidth={mobileWidth}
-        >
-          <Image
-            src={titleImagePath}
-            width={desktopWidth}
-            height={desktopHeight}
-            alt=""
-            className="hidden md:flex"
-          />
-          <Image
-            src={titleImagePath}
-            width={mobileWidth}
-            height={mobileHeight}
-            alt=""
-            className="flex md:hidden"
-          />
-        </TitleImageContainer>
-      )}
+      {titleImagePath &&
+        desktopHeight &&
+        desktopWidth &&
+        mobileHeight &&
+        mobileWidth && (
+          <TitleImageContainer
+            $desktopHeight={desktopHeight}
+            $desktopWidth={desktopWidth}
+            $mobileHeight={mobileHeight}
+            $mobileWidth={mobileWidth}
+          >
+            <Image
+              src={titleImagePath}
+              width={desktopWidth}
+              height={desktopHeight}
+              alt=""
+              className={`flex h-[${mobileHeight}px] w-[${mobileWidth}px] md:h-[${desktopHeight}px] md:w-[${desktopWidth}px]`}
+            />
+          </TitleImageContainer>
+        )}
       <div className="block-title-caption mt-[20px] leading-[30.8px] md:mt-[24px] md:leading-[48.4px]">
         {titleCaption}
       </div>

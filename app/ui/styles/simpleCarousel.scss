@@ -1,0 +1,64 @@
+:root {  
+  --carouselCardWidth: 436px;  
+
+  @media screen and (max-width: 375px) {
+    --carouselCardWidth: 350px;    
+  }
+
+  --carouselWidth: calc(var(--carouselCardWidth) * var(--num));
+  --carouselLeftMargin: -calc((var(--carouselWidth) - 100vw) / 4);
+}
+
+.carouselwrapper {
+    overflow: hidden;
+    background: transparent;
+    position:relative;
+    height: 291px;
+
+    @media screen and (max-width: 375px) {
+      height: 308px;
+    }
+}
+
+.carousel{
+    width: var(--carouselWidth);
+    margin-left: var(--carouselLeftMargin);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  
+  &.prev {
+    animation-duration: .6s;
+    animation-timing-function:cubic-bezier(0.83, 0, 0.17, 1);
+    animation-name: prevCard;
+  }
+  
+  &.next {
+    animation-duration: .6s;
+    animation-timing-function:cubic-bezier(0.83, 0, 0.17, 1);
+    animation-name: nextCard;
+  }
+  
+  li {
+    box-sizing: border-box;
+  }  
+}
+
+@keyframes nextCard {
+  from {
+    transform:translateX(0px);
+  }
+  to {
+    transform:translateX(calc(0px + var(--carouselCardWidth)));
+  }
+}
+
+@keyframes prevCard {
+  from {
+    transform:translateX(0px);
+  }
+  to {
+    transform:translateX(calc(0px - var(--carouselCardWidth)));
+  }
+}

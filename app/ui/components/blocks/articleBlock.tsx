@@ -14,11 +14,12 @@ const ArticleBlock: React.FC = () => {
   return (
     <div className="relative mt-[102px] flex w-[375px] flex-col items-center justify-center md:mt-[200px] md:w-[1280px]">
       {/* <div className="resource-article-bg" /> */}
-      <div className="absolute top-[162px] md:top-[85px]">
+      <div className="absolute top-[162px] md:top-[85px] z-[17]">
         <Player autoplay className="net-player" loop src={netAnimation} />
       </div>
       <div className="resource-article-main-light" />
       <div className="resource-article-main-light1" />
+      <div id="article-center-bg" />
       <BlockTitle
         desktopHeight={68}
         desktopWidth={68}
@@ -31,14 +32,14 @@ const ArticleBlock: React.FC = () => {
         titleMobileWidth={335}
         titleImagePath="/access_resource.png"
       />
-      <div className="z-[18] mt-[20px] w-[335px] md:w-[523px]">
+      <div className="z-[19] mt-[20px] w-[335px] md:w-[523px]">
         <h5 className="text-center">
           Stay ahead of the curve with our newsletter! Receive exclusive
           insights, updates, and tips straight to your inbox, ensuring you never
           miss a beat in the world of development.
         </h5>
       </div>
-      <div className="relative mt-[151.11px] flex h-[162px] w-[304px] flex-col items-center justify-center md:mt-[148.64px] md:h-[199px] md:w-[359.69px]">
+      <div className="relative mt-[151.11px] flex h-[162px] w-[304px] flex-col items-center justify-center md:mt-[148.64px] md:h-[199px] md:w-[359.69px] z-[19]">
         <ProfileAvaName
           avatarBgURL="/avatar/bg.png"
           avatarURL="/avatar/person.png"
@@ -50,7 +51,7 @@ const ArticleBlock: React.FC = () => {
           at Novu, the open-source notification infrastructure startup.
         </h5>
       </div>
-      <div className="mt-[40.89px] flex w-[335px] flex-col md:mt-[60.36px] md:h-[460.05px] md:w-full md:flex-row md:space-x-[10px]">
+      <div className="mt-[40.89px] flex w-[335px] flex-col md:mt-[60.36px] md:h-[460.05px] md:w-full md:flex-row md:space-x-[10px] z-[19]">
         {isDesktop ? (
           <>
             <ArticleCard
@@ -61,14 +62,14 @@ const ArticleBlock: React.FC = () => {
               titleSubCaption="12,492 VIEWS"
               contentTitleCaption="I got 12,492 views for my articles in 3 days"
               posted_date="March 23, 2024"
-              contentCaption="Welcome to all the new newsletter subscribers 🚀 
-              Three days ago, I started a launch that resulted in: 
+              contentCaption="Welcome to all the new newsletter subscribers 🚀
+              Three days ago, I started a launch that resulted in:
               200 stars
               60 newsletter registration
-              I want to say that the launch was super diverse, and many channels helped out. But the truth is, one channel performed 10x better than all the others: DEV.TO 
-              This time, it was different; the traffic didn’t come from DEV but from Google!Google (especially for Android) has a unique feed for article suggestions - being on that feed will drive you a lot of traffic. . 
-              The primary strategy I used for Novu and every person I talk to is “launches.” A weekly spirit of promoting your platform in every possible channel and push to be trending over GitHub. 
-              However, my main problem was that I could never plan my launch ahead.I had to do it manually during the week. Why?"
+              I want to say that the launch was super diverse, and many channels helped out. But the truth is, one channel performed 10x better than all the others: DEV.TO
+              This time, it was different; the traffic didn't come from DEV but from Google!Google (especially for Android) has a unique feed for article suggestions - being on that feed will drive you a lot of traffic.
+              The primary strategy I used for Novu and every person I talk to is 'launches.' A weekly spirit of promoting your platform in every possible channel and push to be trending over GitHub.
+              However, my main problem was that I could never plan my launch ahead.I had to do it manually during the week. Why?"
             />
           </>
         ) : (
@@ -95,7 +96,7 @@ const ArticleBlock: React.FC = () => {
               titleSubCaption="IS LIVE"
               contentTitleCaption="The Gitroom Platform is live 🚀"
               posted_date="March 9, 2024"
-              contentCaption="The Gitroom platform is the best tool for scheduling your open-source launches, and of course, you can also self-host it.  The primary strategy I used for Novu and every person I talk to is “launches.” A weekly spirit of promoting your platform in every possible channel and push to be trending over GitHub.  However, my main problem was that I could never plan my launch ahead.I had to do it manually during the week. Why? But the truth is that only more prominent brands enjoy that (mostly).In Taipy, we have been wildly trying to put our name everywhere, but most of the Reactions we get are: “That’s interesting” or “What’s the difference between you and your competitors?” Taipy is not an established brand—but we will get there. "
+              contentCaption="The Gitroom platform is the best tool for scheduling your open-source launches, and of course, you can also self-host it.  The primary strategy I used for Novu and every person I talk to is “launches.” A weekly spirit of promoting your platform in every possible channel and push to be trending over GitHub.  However, my main problem was that I could never plan my launch ahead.I had to do it manually during the week. Why? But the truth is that only more prominent brands enjoy that (mostly).In Taipy, we have been wildly trying to put our name everywhere, but most of the Reactions we get are: “That’s interesting” or “What’s the difference between you and your competitors?”Taipy is not an established brand—but we will get there."
             />
           </>
         ) : (

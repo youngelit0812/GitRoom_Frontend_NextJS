@@ -17,7 +17,7 @@ type ArticleCardProps = {
   contentCaption: string;
 };
 
-const content_title_ellipsis_limit = 37;
+const content_title_ellipsis_limit = 35;
 const content_ellipsis_limit = 103;
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
@@ -76,7 +76,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           )}
         </ArticleCardTitleWrapper>
         <div className="flex flex-grow flex-col p-[20px]">
-          <div className="text-1 h-[20px] w-[295px] overflow-x-hidden overflow-y-hidden md:h-[24px] md:w-[380px]">
+          <div className="text-1 h-[20px] w-[295px] md:h-[24px] md:w-[380px]">
             {contentTitleCaption.length > content_title_ellipsis_limit
               ? `${contentTitleCaption.substr(
                   0,
@@ -84,17 +84,20 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
                 )}...`
               : contentTitleCaption}
           </div>
-          <div className="row mb-[16px] mt-[16px] flex items-center">
+          <div className="row mb-[16px] mt-[16px] flex items-center space-x-[17.53px]">
             <ProfileAvaName
               avatarURL="/avatar/person.png"
               profileName="Nevo David"
               colDirectionFlag={false}
             />
             <h5 className="leading-[18.2px] text-opacity-80 md:leading-[20.8px]">
+              |
+            </h5>
+            <h5 className="leading-[18.2px] text-opacity-80 md:leading-[20.8px]">
               {posted_date}
             </h5>
           </div>
-          <div className="text-2 h-[46px] w-[295px] overflow-hidden overflow-ellipsis md:w-[380px]">
+          <div className="text-2 h-[46px] w-[295px] md:w-[380px]">
             {contentCaption.length > content_ellipsis_limit
               ? `${contentCaption.substr(0, content_ellipsis_limit)}...`
               : contentCaption}

@@ -15,7 +15,11 @@ const config: Config = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "linearGradient-1": "linear-gradient(45deg, #FFFFFF, #D1D0FF)",        
+        "linearGradient-1": "linear-gradient(45deg, #FFFFFF, #D1D0FF)",  
+        'community-mbLgBg': "url('/community/mobile_lg_card_bg.png')",
+        'community-dtLgBg': "url('/community/desktop_lg_card_bg.png')",
+        'community-mbMdBg': "url('/community/mobile_md_card_bg.png')",
+        'community-dtMdBg': "url('/community/desktop_md_card_bg.png')",
       }),
       gridTemplateColumns: {
         '13': 'repeat(13, minmax(0, 1fr))',

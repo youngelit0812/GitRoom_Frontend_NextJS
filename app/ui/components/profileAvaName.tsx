@@ -74,7 +74,7 @@ const ProfileAvaName: React.FC<ProfileAvaNameProps> = ({
               className="flex md:hidden"
             />
             <h5 className="leading-[18.2px] text-opacity-80 md:leading-[20.8px]">
-              {profileName + '  |  '}
+              {profileName}
             </h5>
           </div>
         </>

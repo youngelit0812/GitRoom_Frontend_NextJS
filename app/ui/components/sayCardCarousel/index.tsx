@@ -1,13 +1,19 @@
-import { useEffect, useRef, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import SayCard from '@/app/ui/components/sayCard';
 
-import {
-  CardContainer
-} from '@/app/ui/components/sayCardCarousel/styles';
+import "@/app/ui/styles/simpleCarousel.scss";
 
-const slideDataList = [
+type CardProp = {
+  id: number;
+  titleImageURL: string;
+  contents: string;
+  personName: string;
+  personContact: string;
+  personImageURL: string;
+}
+
+const slideDataList:CardProp[] = [
   {
     id: 0,
     titleImageURL: '/say_card/mark_1.png',
@@ -56,52 +62,54 @@ const slideDataList = [
 ];
 
 const SayCardCarousel: React.FC = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-  const [activeCardCnt, setActiveCardCnt] = useState(1);
-  const [cardList, setCardList] = useState(slideDataList);
-  const [activeBeginIndex, setActiveBeginIndex] = useState(0);
-  const cardSlideRef = useRef<HTMLDivElement>(null);
-
+  const [moveClass, setMoveClass] = useState('');
+  const [carouselItems, setCarouselItems] = useState(slideDataList);
+  
   useEffect(() => {
-    if (isDesktop) setActiveCardCnt(3);
-    else setActiveCardCnt(1);
-  }, [isDesktop]);
-
-  const handlePrev = () => {
-    if (activeBeginIndex == 0) return;
-    
-    setActiveBeginIndex((old) => old - 1);
-    console.log("current begin index:", activeBeginIndex);
-  };
-
-  const handleNext = () => {
-    if (isDesktop) {
-        if (activeBeginIndex == cardList.length - 3) return;
-    } else {
-        if (activeBeginIndex == cardList.length - 1) return;
+    document.documentElement.style.setProperty('--num', "" + carouselItems.length);
+  }, [carouselItems])
+  
+  const handleAnimationEnd = () => {
+    if(moveClass === 'prev'){
+      shiftNext([...carouselItems]);
+    }else if(moveClass === 'next'){
+      shiftPrev([...carouselItems]);
     }
-
-    setActiveBeginIndex((old) => old + 1);
-  };
+    setMoveClass('')
+  }
+  
+  const shiftPrev = (copy:CardProp[]) => {
+    let lastcard = copy.pop();
+    if (lastcard) {
+        copy.splice(0, 0, lastcard);
+        setCarouselItems(copy);
+    }
+  }
+  
+  const shiftNext = (copy:CardProp[]) => {
+    let firstcard = copy.shift();
+    if (firstcard) {
+        copy.splice(copy.length, 0, firstcard);
+        setCarouselItems(copy);
+    }
+  }
 
   return (
-    <div className="flex h-full w-full flex-col">
-      <CardContainer 
-        $activeIndex={activeBeginIndex}
-        $desktopCardWidth={426}
-        $mobileCardWidth={345}
-        >
-        {cardList.map((card) => (
-          <SayCard
-            key={card.id}
-            titleImageURL={card.titleImageURL}
-            contents={card.contents}
-            sayerName={card.personName}
-            contact={card.personContact}
-            sayerImageURL={card.personImageURL}
-          />
-        ))}
-      </CardContainer>
+    <div>
+      <div className="carouselwrapper">      
+        <ul onAnimationEnd={handleAnimationEnd} className={`${moveClass} carousel`}>
+          {carouselItems.map((card, index) => 
+            <SayCard
+              key={card.id}
+              titleImageURL={card.titleImageURL}
+              contents={card.contents}
+              sayerName={card.personName}
+              contact={card.personContact}
+              sayerImageURL={card.personImageURL}
+              />
+          )}
+        </ul>
+      </div>
       <div className="flex flex-col items-center justify-center h-[40px] md:h-[48px] mt-[40px] w-full">
         <div className="flex h-full w-[90px] flex-row space-x-[10px] md:w-[108px] md:space-x-[12px]">
           <Image          
@@ -110,7 +118,7 @@ const SayCardCarousel: React.FC = () => {
             height={48}
             alt=""
             className="cursor-pointer hidden md:flex"
-            onClick={handlePrev}
+            onClick={() => setMoveClass('next')}
           />
           <Image
             src='/say_card/mobile_prev.png'
@@ -118,7 +126,7 @@ const SayCardCarousel: React.FC = () => {
             height={40}
             alt=""
             className="cursor-pointer flex md:hidden"
-            onClick={handlePrev}
+            onClick={() => setMoveClass('next')}
           />
           <Image
             src='/say_card/desktop_next.png'
@@ -126,7 +134,7 @@ const SayCardCarousel: React.FC = () => {
             height={48}
             alt=""
             className="cursor-pointer hidden md:flex"
-            onClick={handleNext}
+            onClick={() => setMoveClass('prev')}
           />
           <Image
             src='/say_card/mobile_next.png'
@@ -134,7 +142,7 @@ const SayCardCarousel: React.FC = () => {
             height={40}
             alt=""
             className="cursor-pointer flex md:hidden"
-            onClick={handleNext}
+            onClick={() => setMoveClass('prev')}
           />
         </div>
       </div>

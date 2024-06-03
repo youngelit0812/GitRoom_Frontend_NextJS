@@ -22,6 +22,28 @@ $mobile-slide-image-width: 846.06px;
   background-image: url('/article_card/card_border.png');
 }
 
+#article-center-bg {
+  position: absolute;
+  background: #000000;
+  z-index: 16;
+
+  @media screen and (max-width: 1920px) {
+    width: 1084px;
+    height: 927px;
+    left: calc(50% - 1084px/2);
+    top: 2px;
+    filter: blur(150px);
+  }
+
+  @media screen and (max-width: 375px) {  
+    width: 813px;
+    height: 484px;
+    left: calc(50% - 813px/2 - 1px);
+    top: 220.75px;
+    filter: blur(112.502px);
+  }
+}
+
 .banner-wrapper {
   backdrop-filter: blur(80px);
 }
@@ -32,6 +54,20 @@ $mobile-slide-image-width: 846.06px;
 
 .block-sub-title-caption {
   @apply mt-[20px] text-[14px] text-primary md:mt-[16px] md:text-[16px];
+}
+
+#community-left-light {
+  position: absolute;
+  width: 95.98px;
+  height: 265.69px;
+  left: -62.45px;
+  top: 19.85px;
+
+  background: #010101;
+  filter: blur(50px);
+  border-radius: 10000px;
+  transform: rotate(0.72deg);
+  z-index: 19;
 }
 
 .git-community-card-caption {
@@ -59,7 +95,7 @@ $mobile-slide-image-width: 846.06px;
 
 .git-community-card-md-animation {
   @media screen and (max-width: 1920px) {
-    @apply w-[631px];
+    @apply w-[633px];
   }
 
   /* Desktop styles - screens larger than or equal to 768px */
@@ -69,11 +105,11 @@ $mobile-slide-image-width: 846.06px;
 }
 
 .grid-player {
-  @apply h-[1330px] w-[1440px] z-[18];
+  @apply z-[18] h-[1330px] w-[1440px];
 }
 
 .grid-mobile-player {
-  @apply h-[696px] w-[375px] z-[18];
+  @apply z-[18] h-[696px] w-[375px];
 }
 
 .home-footer-player {
@@ -98,17 +134,110 @@ $mobile-slide-image-width: 846.06px;
   }
 }
 
-.header-player {
+#header-left-light1 {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    width: 807.42px;
+    height: 807.42px;
+    right: calc(50% + 492px);
+    top: 309.27px;
+
+    opacity: 0.6;
+    z-index: 18;
+  }
+}
+
+#header-left-light2 {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    width: 807.42px;
+    height: 807.42px;
+    left: calc(50% - 1299.42px);
+    top: 309.27px;
+
+    background: #4517ff;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    filter: blur(500px);
+    z-index: 19;
+  }
+}
+
+#header-left-light3 {
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    width: 601.36px;
+    height: 601.36px;
+    left: calc(50% - 1196.39px);
+    top: 412.3px;
+
+    background: #7b4cff;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    filter: blur(300px);
+    z-index: 20;
+  }
+}
+
+#header-right-bottom-light {
+  position: absolute;
+  background: linear-gradient(
+    234.18deg,
+    rgba(3, 1, 12, 0) 52.03%,
+    #03010c 85.36%,
+    rgba(0, 0, 0, 0.4) 118.4%
+  );
+  transform: matrix(-0.98, -0.17, -0.17, 0.98, 0, 0);
+  z-index: 19;
+
   @media screen and (max-width: 1920px) {
-    @apply absolute left-[-260px] top-0 w-[2440px];
+    width: 758.37px;
+    height: 558.84px;
+    right: -843.71px;
+    top: 418.15px;
   }
 
-  @media screen and (max-width: 1440px) {
-    @apply absolute left-[-500px] top-0 w-[2440px];
+  @media screen and (max-width: 375px) {
+    width: 448.7px;
+    height: 330.65px;
+    right: -581.64px;
+    top: 247.41px;
+  }
+}
+
+.header-player {
+  @media screen and (max-width: 1920px) {
+    @apply absolute top-0 w-[2400px];
+    left: calc(50% - 1200px);
   }
   /* Desktop styles - screens larger than or equal to 768px */
   @media screen and (max-width: 375px) {
     @apply absolute left-[-700px] top-0 w-[1420px];
+  }
+}
+
+.header-shadow {
+  position: absolute;
+  z-index: 19;
+
+  background: linear-gradient(
+    182.44deg,
+    rgba(0, 0, 0, 0) 1.99%,
+    #000000 74.81%
+  );
+
+  @media screen and (max-width: 1920px) {
+    width: 1440px;
+    height: 109.99px;
+    left: calc(50% - 720px);
+    top: 690.01px;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: 852.01px;
+    height: 65.08px;
+    left: -442.74px;
+    top: 408.26px;
   }
 }
 
@@ -455,9 +584,9 @@ $mobile-slide-image-width: 846.06px;
   background: #000000;
   position: absolute;
 
-  filter: blur(71.155px);  
+  filter: blur(71.155px);
   height: 268.78px;
-  left: calc(50% - 464.88px/2);
+  left: calc(50% - 464.88px / 2);
   top: 11.22px;
   width: 464.88px;
   z-index: 18;

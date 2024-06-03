@@ -14,7 +14,7 @@ const GitCommunityCardMd: React.FC<GitCommunityCardMdProps> = ({
   content,  
 }) => {
   return (
-    <div className="relative border border-borderColor h-[280px] w-[335px] overflow-x-hidden md:h-[300px] md:w-[635px]">
+    <div className="relative bg-community-mbMdBg md:bg-community-dtMdBg h-[280px] w-[335px] overflow-x-hidden md:h-[300px] md:w-[635px]">
       <Player
         autoplay
         className="git-community-card-md-animation"
