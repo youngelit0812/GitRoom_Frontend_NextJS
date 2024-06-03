@@ -6,12 +6,11 @@ import localFont from 'next/font/local';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 import ArticleBlock from '@/app/ui/components/blocks/articleBlock';
-import Banner from '@/app/ui/components/banner';
 import BlockTitle from '@/app/ui/components/blockTitle';
 import CommunityBlock from '@/app/ui/components/blocks/communityBlock';
 import EmailSubscribe from '@/app/ui/components/emailSubscribe';
 import Footer from '@/app/ui/components/blocks/footer';
-
+import Header from '@/app/ui/components/blocks/header';
 import RadiusButton from '@/app/ui/components/radiusButton';
 import SayCardCarousel from '@/app/ui/components/sayCardCarousel';
 import SubscribeBlock from '@/app/ui/components/blocks/subscribeBlock';
@@ -20,7 +19,6 @@ import '@/app/ui/styles/style.scss';
 
 import gridAnimation from '@/app/ui/lotties/Grid.json';
 import gridMobileAnimation from '@/app/ui/lotties/Grid-mobile.json';
-import headerAnimation from '@/app/ui/lotties/Header.json';
 import homeFooterAnimation from '@/app/ui/lotties/HomeFooter.json';
 
 const primaryFont = localFont({
@@ -68,29 +66,7 @@ const Page = () => {
           alt=""
           className="absolute left-0 top-0 flex md:hidden"
         />
-        <div className="header-top-light" />
-        <div className="header-top-light-md" />
-        <div className="header-top-light-sm" />
-        <Player autoplay className="header-player" loop src={headerAnimation} />
-        <div className="flex h-full w-full flex-col items-center justify-center z-[19]">
-          <div className="mt-[12px] flex h-full w-[335px] flex-col md:mt-[16px] md:w-[1280px]">
-            <Banner />
-            <div className="mt-[212px] flex h-[144px] w-[335px] flex-col leading-none md:mt-[64px] md:h-[270px] md:w-[615px]">
-              <h1>Grow Your Open-Source Community</h1>              
-            </div>
-            <div className="mt-[24px] flex h-[178px] w-[335px] flex-col leading-[16.8px] md:mt-[90px] md:h-[176px] md:w-[508px] md:leading-[19.2px]">
-                <h5>
-                  Tools to help your grow your open-source repository. Gain more
-                  visibility, stars, contributions and customers. Get free
-                  weekly value by registering to the newsletter.
-                </h5>
-                <EmailSubscribe />
-              </div>
-          </div>
-          <div className="flex mt-[108px] w-[375px] overflow-x-hidden md:mt-[124px] md:w-[1440px] z-[19]">
-            <img className="slide-image" src="/Logos.png" alt="" />
-          </div>
-        </div>
+        <Header />
       </div>
       <div className="flex w-full flex-col items-center justify-center">
         <ArticleBlock />
@@ -113,7 +89,7 @@ const Page = () => {
         </div>
         <SubscribeBlock />
         <div className="relative flex h-[698px] w-[375px] flex-col items-center justify-center md:h-[1408px] md:w-[1440px]">
-          <div className="absolute top-0">
+          <div className="absolute top-[50px]">
             {isDesktop ? (
               <>
                 <Player
@@ -134,7 +110,7 @@ const Page = () => {
               </>
             )}
           </div>
-          <div className="mt-[69px] flex h-[630px] w-[351px] flex-col items-center justify-center md:mt-[233px] md:h-[1175px] md:w-full">
+          <div className="mt-[209px] flex h-[630px] w-[351px] flex-col items-center justify-center md:mt-[233px] md:h-[1175px] md:w-full">
             <div className="platform-light" />
             <div className="platform-light1" />
             <div className="platform-light2" />

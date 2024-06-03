@@ -10,7 +10,7 @@ export const MenuModalWrapper = styled.div<{ $isshow: boolean }>`
   border-radius: 12px;
   top: 12px;
   left: 20px;
-  z-index: 12;
+  z-index: 20;
   padding: 16px;
   display: flex;
   flex-direction: column;

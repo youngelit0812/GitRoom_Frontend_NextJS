@@ -49,6 +49,10 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
               mobileHeight={23.41}
               mobileWidth={21.78}
               text_type={2}
+              leftDesktopMargin={0}
+              topDesktopMargin={7}
+              leftMobileMargin={0}
+              topMobileMargin={7}
             />
           </div>
           {type ? (

@@ -21,7 +21,7 @@ const EmailSubscribe:React.FC<EmailSubscribeProps> = ({
         <div className="radius-button absolute right-[4px] top-[4px] h-[42px] w-[140px] rounded-[12px] md:h-[48px] md:w-[164px]">
           <h4>Subscribe</h4>
         </div>
-      </div>
+      </div>      
       <h6 className={`w-[${smallCaptionMobileWidth}px] md:w-[${smallCaptionDesktopWidth}px]`}>
         * Add your email, a video of getting the first 1,000 stars will be sent
         to your email

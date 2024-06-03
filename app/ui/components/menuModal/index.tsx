@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import BannerMark from '@/app/ui/components/bannerMark';
 import { CloseBtn, MenuModalWrapper } from './styles';
 
@@ -10,8 +11,17 @@ const MenuModal: React.FC<MenuModalProps> = ({ show_flag, onClose }) => {
   return (
     <>
       <MenuModalWrapper $isshow={show_flag}>
-        <div className="row flex w-full justify-between">
-          <BannerMark />
+        <div className="relative row flex w-full justify-between">
+          <div className="relative w-[97.33px] h-[24.3px]">
+            <Image
+              src="/banner_mark.png"
+              width={100.07}
+              height={104.22}
+              alt=""
+              className="absolute top-[-30px] left-[-35px]"
+            />
+            <BannerMark text_type={1} />
+          </div>
           <CloseBtn>
             <span className="leading-none" onClick={onClose}>&times;</span>
           </CloseBtn>

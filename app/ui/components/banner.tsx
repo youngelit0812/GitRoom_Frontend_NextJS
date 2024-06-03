@@ -1,27 +1,38 @@
-import React, { useState } from 'react';
+import Image from 'next/image';
 
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import BannerMark from '@/app/ui/components/bannerMark';
-import MenuModal from '@/app/ui/components/menuModal';
 
-const Banner: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
+type BannerProps = {
+  openMenuModal: () => void;
+}
 
-  const openMenuModal = () => setShowModal(true);
-  const closeMenuModal = () => {
-    console.log("close button clicked");
-    setShowModal(false);
-  }
+const Banner: React.FC<BannerProps> = ({
+  openMenuModal
+}) => {  
   return (
-    <div className="banner-wrapper row bg-opacity-35 flex h-[60px] w-[335px] justify-between rounded-[12px] bg-banner p-[16px] md:min-h-[80px] md:w-[1280px] md:rounded-[20px]">
+    <div className="relative banner-wrapper row bg-opacity-35 flex h-[60px] w-[335px] justify-between rounded-[12px] bg-banner p-[16px] md:min-h-[80px] md:w-[1280px] md:rounded-[20px]">
+       <Image
+            src="/banner_mark.png"
+            width={168}
+            height={184}
+            alt=""
+            className={`hidden md:flex md:absolute md:top-[-25px] md:left-[-40px]`}
+          />
+          <Image
+            src="/banner_mark.png"
+            width={103.07}
+            height={107.22}
+            alt=""
+            className="absolute top-[-12px] left-[-20px] md:hidden"
+          />
       <div className="h-full w-[97.33px] md:w-[145px]">
-        <BannerMark
-          imageURL="/banner_mark.png"
-          desktopHeight={62.03}
-          desktopWidth={68}
+        <BannerMark          
+          desktopHeight={168}
+          desktopWidth={184}
           mobileHeight={43.07}
           mobileWidth={47.22}
-          text_type={1}
+          text_type={1}              
         />
       </div>
       <div className="row flex">
@@ -45,8 +56,7 @@ const Banner: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-      <MenuModal show_flag={showModal} onClose={closeMenuModal} />
+      </div>      
     </div>
   );
 }
