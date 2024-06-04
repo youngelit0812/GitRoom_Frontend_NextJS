@@ -27,24 +27,15 @@ const BannerMark:React.FC<BannerMarkProps> = ({
   topMobileMargin,
 }) => {
   return (
-    <div className="relative row flex h-full w-full">
+    <div className="relative flex w-full h-full">
       {imageURL && (
-        <>
           <Image
             src={imageURL}
             width={desktopWidth}
             height={desktopHeight}
             alt=""
-            className={`hidden md:flex md:absolute md:top-[-${topDesktopMargin}px] md:left-[-${leftDesktopMargin}px]`}
+            className={`absolute left-[-${leftMobileMargin}px] top-[${topMobileMargin}px] h-[${mobileHeight}px] w-[${mobileWidth}px] md:flex md:absolute md:top-[${topDesktopMargin}px] md:left-[-${leftDesktopMargin}px] md:h-[${desktopHeight}px] md:w-[${desktopWidth}px]`}
           />
-          <Image
-            src={imageURL}
-            width={mobileWidth}
-            height={mobileHeight}
-            alt=""
-            className={`absolute left-[-${leftMobileMargin}px] top-[-${topMobileMargin}px] md:hidden`}
-          />
-        </>
       )}
       {text_type === 1 ? (
         <h3 className="absolute right-0 bottom-0">Gitroom</h3>

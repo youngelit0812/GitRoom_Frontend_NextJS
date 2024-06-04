@@ -7,13 +7,14 @@ const Footer: React.FC = () => {
       <div className="flex h-[358.71px] w-[226px] justify-between sm:flex-col md:h-[68px] md:h-full md:w-full md:flex-row">
         <div className="flex h-[74.71px] w-full flex-col space-y-[16px] md:h-full md:w-[259px] md:space-y-[10px]">
           <div className="font-primary text-[23.8px] font-semibold leading-[30.94px] text-primary md:text-[26.47px] md:leading-[34.41px]">
-            <BannerMark          
+            Gitroom
+            {/* <BannerMark          
               desktopHeight={168}
               desktopWidth={184}
               mobileHeight={43.07}
               mobileWidth={47.22}
               text_type={1}              
-            />
+            /> */}
           </div>
           <h5 className="leading-[24px]">Grow your open-source community</h5>
         </div>

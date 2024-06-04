@@ -3,16 +3,16 @@ import SayCardCarousel from '@/app/ui/components/sayCardCarousel';
 
 const PeopleSayBlock:React.FC = () => {
     return (
-        <div className="relative mt-[100px] flex h-[560px] w-[375px] flex-col items-center justify-center overflow-x-hidden md:mt-[200px] md:h-[608px] md:w-[1440px]">
+        <div className="relative mt-[100px] flex w-[375px] flex-col items-center justify-center overflow-x-hidden md:mt-[200px] md:w-[1440px]">
           <BlockTitle
-            desktopHeight={68}
-            desktopWidth={68}
-            mobileHeight={50}
-            mobileWidth={50}
+            desktopHeight={132}
+            desktopWidth={132}
+            mobileHeight={96}
+            mobileWidth={96}
             titleCaption="What People Say"
-            titleDesktopHeight={149}
+            titleDesktopHeight={213}
             titleDesktopWidth={349}
-            titleMobileHeight={106}
+            titleMobileHeight={152}
             titleMobileWidth={222}
             titleImagePath="/people_say.png"
           />

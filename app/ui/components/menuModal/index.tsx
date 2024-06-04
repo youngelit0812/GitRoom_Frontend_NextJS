@@ -11,7 +11,7 @@ const MenuModal: React.FC<MenuModalProps> = ({ show_flag, onClose }) => {
   return (
     <>
       <MenuModalWrapper $isshow={show_flag}>
-        <div className="relative row flex w-full justify-between">
+        <div className="relative row flex w-full justify-between z-[21]">
           <div className="relative w-[97.33px] h-[24.3px]">
             <Image
               src="/banner_mark.png"
@@ -26,7 +26,7 @@ const MenuModal: React.FC<MenuModalProps> = ({ show_flag, onClose }) => {
             <span className="leading-none" onClick={onClose}>&times;</span>
           </CloseBtn>
         </div>
-        <div className="mt-[80px] flex h-[302px] w-full flex-col items-center justify-center">
+        <div className="mt-[80px] flex h-[302px] w-full flex-col items-center justify-center z-[21]">
           <div className="flex h-[130px] w-[144px] flex-col items-center justify-center space-y-[32px]">
             <h2>Community Deals</h2>
             <h2>Oss Friends</h2>

@@ -6,14 +6,14 @@ const SubscribeBlock: React.FC = () => {
     <div className="relative mt-[102px] flex w-[375px] flex-col items-center justify-center md:mt-[200px] md:w-[1280px]">
       <div className='subscribe-light-off' />
       <BlockTitle
-        desktopHeight={68}
-        desktopWidth={68}
-        mobileHeight={50}
-        mobileWidth={50}
+        desktopHeight={136}
+        desktopWidth={131}
+        mobileHeight={96}
+        mobileWidth={96}
         titleCaption="Subscribe Now to Receive Weekly Tips"
-        titleDesktopHeight={140}
+        titleDesktopHeight={208}
         titleDesktopWidth={793}
-        titleMobileHeight={124}
+        titleMobileHeight={170}
         titleMobileWidth={335}
         titleImagePath="/subscribe_tip.png"
       />

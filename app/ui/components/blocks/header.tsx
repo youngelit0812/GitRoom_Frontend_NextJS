@@ -25,7 +25,8 @@ const Header: React.FC = () => {
       <div id="header-left-light1" />
       <div id="header-left-light2" />
       <div id="header-left-light3" />
-      <div id="header-right-bottom-light" />
+      <div id="header-left-bottom-shadow" />
+      <div id="header-right-bottom-shadow" />
       <Player autoplay className="header-player" loop src={headerAnimation} />
       <div className="z-[19] flex h-full w-full flex-col items-center justify-center">
         <div className="mt-[12px] flex h-full w-[335px] flex-col md:mt-[16px] md:w-[1280px]">
@@ -42,7 +43,8 @@ const Header: React.FC = () => {
             <EmailSubscribe />
           </div>
         </div>
-        <div className="z-[19] mt-[108px] flex w-[375px] overflow-x-hidden md:mt-[124px] md:w-[1440px]">
+        <div className="relative z-[19] mt-[108px] flex w-[375px] md:mt-[124px] md:w-[1440px]">
+          <div className="slide-image-blur" />
           <img className="slide-image" src="/Logos.png" alt="" />
         </div>
       </div>

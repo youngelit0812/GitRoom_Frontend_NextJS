@@ -35,21 +35,21 @@ const PlatformBlock:React.FC = () => {
               </>
             )}
           </div>
-          <div className="mt-[209px] flex h-[630px] w-[351px] flex-col items-center justify-center md:mt-[233px] md:h-[1175px] md:w-full">
+          <div className="mt-[209px] pt-[10px] flex w-[351px] flex-col items-center justify-center md:mt-[233px] md:w-full">
             <div className="platform-light" />
             <div className="platform-light1" />
             <div className="platform-light2" />
             <div className="platform-light3" />
             <div className="platform-shadow" />
             <BlockTitle
-              desktopHeight={62.03}
-              desktopWidth={68}
-              mobileHeight={50}
-              mobileWidth={50}
+              desktopHeight={168}
+              desktopWidth={184}
+              mobileHeight={123}
+              mobileWidth={135}
               titleCaption="Gitroom Platform"
-              titleDesktopHeight={107}
+              titleDesktopHeight={207}
               titleDesktopWidth={355}
-              titleMobileHeight={97}
+              titleMobileHeight={160}
               titleMobileWidth={335}
               titleImagePath="/banner_mark.png"
             />

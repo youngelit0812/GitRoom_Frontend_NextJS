@@ -14,21 +14,21 @@ const ArticleBlock: React.FC = () => {
   return (
     <div className="relative mt-[102px] flex w-[375px] flex-col items-center justify-center md:mt-[200px] md:w-[1280px]">
       {/* <div className="resource-article-bg" /> */}
-      <div className="absolute top-[162px] md:top-[85px] z-[17]">
+      <div className="absolute top-[329px] md:top-[302px] z-[17]">
         <Player autoplay className="net-player" loop src={netAnimation} />
       </div>
       <div className="resource-article-main-light" />
       <div className="resource-article-main-light1" />
       <div id="article-center-bg" />
       <BlockTitle
-        desktopHeight={68}
-        desktopWidth={68}
-        mobileHeight={50}
-        mobileWidth={50}
+        desktopHeight={134}
+        desktopWidth={131}
+        mobileHeight={96}
+        mobileWidth={96}
         titleCaption="Stay Informed: Access Free Learning Resources and Articles"
-        titleDesktopHeight={188}
+        titleDesktopHeight={254}
         titleDesktopWidth={784.5}
-        titleMobileHeight={163}
+        titleMobileHeight={209}
         titleMobileWidth={335}
         titleImagePath="/access_resource.png"
       />
@@ -39,7 +39,7 @@ const ArticleBlock: React.FC = () => {
           miss a beat in the world of development.
         </h5>
       </div>
-      <div className="relative mt-[151.11px] flex h-[162px] w-[304px] flex-col items-center justify-center md:mt-[148.64px] md:h-[199px] md:w-[359.69px] z-[19]">
+      <div className="relative mt-[165.11px] flex h-[162px] w-[304px] flex-col items-center justify-center md:mt-[148.64px] md:h-[199px] md:w-[359.69px] z-[19]">
         <ProfileAvaName
           avatarBgURL="/avatar/bg.png"
           avatarURL="/avatar/person.png"

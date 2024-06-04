@@ -13,14 +13,14 @@ const CommunityBlock: React.FC = () => {
   const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
-    <div className="z-[19] mt-[100.2px] flex h-[1585px] w-[375px] flex-col items-center justify-center overflow-x-hidden bg-transparent md:mt-[200px] md:h-[1051px] md:w-[1280px]">
+    <div className="z-[19] mt-[200.2px] flex w-[375px] flex-col items-center justify-center overflow-x-hidden bg-transparent md:mt-[200px] md:w-[1280px]">
       <BlockTitle
-        desktopHeight={68}
-        desktopWidth={68}
+        desktopHeight={126}
+        desktopWidth={131}
         mobileHeight={50}
         mobileWidth={50}
         titleCaption="Join the Gitroom Community"
-        titleDesktopHeight={140}
+        titleDesktopHeight={198}
         titleDesktopWidth={592}
         titleMobileHeight={132}
         titleMobileWidth={335}

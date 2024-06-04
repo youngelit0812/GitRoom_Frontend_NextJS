@@ -5,11 +5,11 @@ export const MenuModalWrapper = styled.div<{ $isshow: boolean }>`
   height: 612px;
   position: fixed;
   background-color: rgba(38, 37, 52, 0.35);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   top: 12px;
-  left: 20px;
+  left: calc(50% - 335px/2);
   z-index: 20;
   padding: 16px;
   display: flex;

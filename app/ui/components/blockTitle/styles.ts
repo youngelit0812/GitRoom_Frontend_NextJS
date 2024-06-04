@@ -11,6 +11,7 @@ export const TitleContainer = styled.div<{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   width: ${({ $mobileWidth }) => $mobileWidth}px;
   height: ${({ $mobileHeight }) => $mobileHeight}px;
@@ -32,11 +33,11 @@ export const TitleImageContainer = styled.div<{
   position: relative;
   display: flex;
 
-  width: ${({ $mobileWidth }) => $mobileWidth}px;
-  height: ${({ $mobileHeight }) => $mobileHeight}px;
+  width: ${({ $desktopWidth }) => $desktopWidth}px;
+  height: ${({ $desktopHeight }) => $desktopHeight}px;
 
-  @media screen and (min-width: 768px) and (max-width: 1920px) {
-    width: ${({ $desktopWidth }) => $desktopWidth}px;
-    height: ${({ $desktopHeight }) => $desktopHeight}px;
+  @media screen and (max-width: 375px) {
+    width: ${({ $mobileWidth }) => $mobileWidth}px;
+    height: ${({ $mobileHeight }) => $mobileHeight}px;
   }
 `;
