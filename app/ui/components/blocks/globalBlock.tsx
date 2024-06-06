@@ -6,6 +6,7 @@ import homeFooterAnimation from '@/app/ui/lotties/HomeFooter.json';
 const GlobalBlock: React.FC = () => {
   return (
     <div className="relative mt-[60px] flex h-[413px] w-[375px] flex-col md:mt-[80px] md:h-[800px] md:w-[1440px]">
+      <div id="global-light-off" />
       <Player
         autoplay
         className="home-footer-player"

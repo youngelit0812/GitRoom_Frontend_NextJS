@@ -4,6 +4,7 @@ import SayCardCarousel from '@/app/ui/components/sayCardCarousel';
 const PeopleSayBlock:React.FC = () => {
     return (
         <div className="relative mt-[100px] flex w-[375px] flex-col items-center justify-center overflow-x-hidden md:mt-[200px] md:w-[1440px]">
+          <div id="people-say-light-off" />
           <BlockTitle
             desktopHeight={132}
             desktopWidth={132}
@@ -16,7 +17,7 @@ const PeopleSayBlock:React.FC = () => {
             titleMobileWidth={222}
             titleImagePath="/people_say.png"
           />
-          <div className="mt-[66px] flex h-[388px] md:mt-[80px] md:h-[379px]">
+          <div className="relative mt-[66px] flex h-[388px] md:mt-[80px] md:h-[379px] z-[19]">
             <SayCardCarousel />
           </div>
         </div>

@@ -9,7 +9,7 @@ import RadiusButton from '@/app/ui/components/radiusButton';
 import netAnimation from '@/app/ui/lotties/Net.json';
 
 const ArticleBlock: React.FC = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 376 });
 
   return (
     <div className="relative mt-[102px] flex w-[375px] flex-col items-center justify-center md:mt-[200px] md:w-[1280px]">

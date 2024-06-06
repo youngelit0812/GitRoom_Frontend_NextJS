@@ -10,10 +10,11 @@ import ossAnimation from '@/app/ui/lotties/Oss.json';
 import youtubeAnimation from '@/app/ui/lotties/Youtube.json';
 
 const CommunityBlock: React.FC = () => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 376 });
 
   return (
-    <div className="z-[19] mt-[200.2px] flex w-[375px] flex-col items-center justify-center overflow-x-hidden bg-transparent md:mt-[200px] md:w-[1280px]">
+    <div className="relative z-[19] mt-[200.2px] flex w-[375px] flex-col items-center justify-center overflow-x-hidden bg-transparent md:mt-[200px] md:w-[1280px]">
+      <div id="community-title-light-off" />
       <BlockTitle
         desktopHeight={126}
         desktopWidth={131}
@@ -26,7 +27,7 @@ const CommunityBlock: React.FC = () => {
         titleMobileWidth={335}
         titleImagePath="/join_community.png"
       />
-      <div className="relative mt-[40px] flex w-full flex-col items-center justify-center space-y-[8px] md:mt-[80.48px] md:flex md:flex-row md:space-y-[0px]">
+      <div className="relative mt-[40px] flex w-full flex-col items-center justify-center space-y-[8px] md:mt-[80.48px] md:flex md:flex-row md:space-y-[0px] z-[16]">
         <div id="community-left-light" />
         <GitCommunityCardLg
           backAnimation={ossAnimation}

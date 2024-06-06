@@ -3,7 +3,7 @@ import BannerMark from '@/app/ui/components/bannerMark';
 
 const Footer: React.FC = () => {
   return (
-    <div className="mt-[80px] flex h-[736.71px] w-[375px] flex-col items-center px-[20px] py-[40px] sm:text-center md:mt-[60px] md:h-[288px] md:w-[1440px] md:pb-[32px] md:pl-[80px] md:pr-[80px] md:pt-[64px] md:text-justify">
+    <div className="relative mt-[80px] flex h-[736.71px] w-[375px] flex-col items-center px-[20px] py-[40px] sm:text-center md:mt-[60px] md:h-[288px] md:w-[1440px] md:pb-[32px] md:pl-[80px] md:pr-[80px] md:pt-[64px] md:text-justify z-[15]">
       <div className="flex h-[358.71px] w-[226px] justify-between sm:flex-col md:h-[68px] md:h-full md:w-full md:flex-row">
         <div className="flex h-[74.71px] w-full flex-col space-y-[16px] md:h-full md:w-[259px] md:space-y-[10px]">
           <div className="font-primary text-[23.8px] font-semibold leading-[30.94px] text-primary md:text-[26.47px] md:leading-[34.41px]">

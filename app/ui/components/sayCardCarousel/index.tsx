@@ -111,13 +111,13 @@ const SayCardCarousel: React.FC = () => {
         </ul>
       </div>
       <div className="flex flex-col items-center justify-center h-[40px] md:h-[48px] mt-[40px] w-full">
-        <div className="flex h-full w-[90px] flex-row space-x-[10px] md:w-[108px] md:space-x-[12px]">
+        <div className="relative flex h-full w-[90px] flex-row space-x-[10px] md:w-[108px] md:space-x-[12px] z-[19]">
           <Image          
             src='/say_card/desktop_prev.png'
             width={48}
             height={48}
             alt=""
-            className="cursor-pointer hidden md:flex"
+            className="cursor-pointer hidden md:flex z-[20]"
             onClick={() => setMoveClass('next')}
           />
           <Image
@@ -125,7 +125,7 @@ const SayCardCarousel: React.FC = () => {
             width={40}
             height={40}
             alt=""
-            className="cursor-pointer flex md:hidden"
+            className="cursor-pointer flex md:hidden z-[20]"
             onClick={() => setMoveClass('next')}
           />
           <Image
@@ -133,7 +133,7 @@ const SayCardCarousel: React.FC = () => {
             width={48}
             height={48}
             alt=""
-            className="cursor-pointer hidden md:flex"
+            className="cursor-pointer hidden md:flex z-[20]"
             onClick={() => setMoveClass('prev')}
           />
           <Image
@@ -141,7 +141,7 @@ const SayCardCarousel: React.FC = () => {
             width={40}
             height={40}
             alt=""
-            className="cursor-pointer flex md:hidden"
+            className="cursor-pointer flex md:hidden z-[20]"
             onClick={() => setMoveClass('prev')}
           />
         </div>

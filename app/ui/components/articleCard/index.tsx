@@ -37,7 +37,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   posted_date,
   contentCaption,
 }) => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 376 });
 
   return (
     <div className="article-wrapper-border relative h-[391px] w-[335px] rounded-[4px] md:h-[460px] md:w-[420px]">

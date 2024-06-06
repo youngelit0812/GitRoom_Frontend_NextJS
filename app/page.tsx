@@ -39,34 +39,33 @@ const Page = () => {
     <main
       className={`${primaryFont.variable} ${secondaryFont.variable} flex min-h-screen flex-col items-center justify-center sm:overflow-x-hidden`}
     >
-      <div
-        className="relative flex w-[375px] flex-col items-center justify-center md:w-[1440px]"
-        id="top-banner"
-      >
+      <div className="relative h-full w-[375px] md:w-[1440px] z-[1]">
         <Image
           src="/desktop_bg.png"
           width={1440}
-          height={7313}
+          height={6791}
           alt=""
-          className="hidden md:absolute md:left-0 md:top-0 md:flex"
+          className="hidden md:absolute md:left-0 md:top-[696px] md:flex"
         />
         <Image
           src="/mobile_bg.png"
           width={375}
           height={7561}
           alt=""
-          className="absolute left-0 top-0 flex md:hidden"
+          className="absolute left-0 top-[812px] flex md:hidden"
         />
-        <Header />
-      </div>
-      <div className="flex w-full flex-col items-center justify-center">
-        <ArticleBlock />
-        <PeopleSayBlock />
-        <SubscribeBlock />
-        <PlatformBlock />
-        <CommunityBlock />
-        <GlobalBlock />
-        <Footer />
+        <div className="relative flex w-full max-w-[375px] flex-col items-center justify-center md:max-w-[1440px]">
+          <Header />
+        </div>
+        <div className="flex w-full flex-col items-center justify-center">
+          <ArticleBlock />
+          <PeopleSayBlock />
+          <SubscribeBlock />
+          <PlatformBlock />
+          <CommunityBlock />
+          <GlobalBlock />
+          <Footer />
+        </div>
       </div>
     </main>
   );

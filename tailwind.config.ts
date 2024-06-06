@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,7 +10,7 @@ const config: Config = {
   theme: {
     screens: {
       sm: "375px",
-      md: "768px",
+      md: "376px",
       lg: "1280px",
       xl: "1440px",
     },

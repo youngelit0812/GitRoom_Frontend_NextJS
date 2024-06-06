@@ -9,7 +9,7 @@ import gridAnimation from '@/app/ui/lotties/Grid.json';
 import gridMobileAnimation from '@/app/ui/lotties/Grid-mobile.json';
 
 const PlatformBlock:React.FC = () => {
-    const isDesktop = useMediaQuery({ minWidth: 768 });
+    const isDesktop = useMediaQuery({ minWidth: 376 });
 
     return (
         <>
